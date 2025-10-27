@@ -1,0 +1,1441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rhey Business Launch - Start Your Dream Business Today</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #f59e0b;
+            --secondary-color: #ea580c;
+            --accent-color: #06b6d4;
+            --text-dark: #111827;
+            --text-light: #6b7280;
+            --bg-light: #fef3c7;
+            --white: #ffffff;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: var(--shadow);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo::before {
+            content: "🚀";
+            font-size: 1.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            cursor: pointer;
+        }
+
+        .mobile-menu span {
+            width: 25px;
+            height: 3px;
+            background: var(--text-dark);
+            transition: 0.3s;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            padding: 5rem 2rem;
+            background: linear-gradient(135deg, #fef3c7 0%, #fed7aa 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(245, 158, 11, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: drift 25s linear infinite;
+        }
+
+        @keyframes drift {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero-text .highlight {
+            color: var(--primary-color);
+        }
+
+        .hero-text p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            color: var(--text-light);
+            animation: fadeInUp 1s ease 0.2s backwards;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+            animation: fadeInUp 1s ease 0.4s backwards;
+        }
+
+        .stat-box {
+            text-align: center;
+        }
+
+        .stat-box .number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .stat-box .label {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .hero-image {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            animation: fadeInUp 1s ease 0.6s backwards;
+        }
+
+        .business-icon {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .business-icon:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .business-icon .emoji {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .business-icon p {
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            font-weight: 600;
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: var(--white);
+            box-shadow: var(--shadow);
+        }
+
+        .btn-primary:hover {
+            background: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-color);
+            color: var(--white);
+        }
+
+        /* Business Types Section */
+        .business-types {
+            padding: 5rem 2rem;
+            background: var(--white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .business-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .business-card {
+            background: var(--white);
+            border: 2px solid #f3f4f6;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .business-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .business-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-color);
+        }
+
+        .business-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .business-card .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .business-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .business-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .business-card .requirements {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #f3f4f6;
+            font-size: 0.85rem;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 5rem 2rem;
+            background: linear-gradient(to bottom, #fef3c7, #ffffff);
+        }
+
+        .services-timeline {
+            max-width: 900px;
+            margin: 3rem auto;
+            display: grid;
+            gap: 3rem;
+        }
+
+        .service-step {
+            display: grid;
+            grid-template-columns: 80px 1fr;
+            gap: 2rem;
+            align-items: start;
+        }
+
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            box-shadow: var(--shadow);
+        }
+
+        .step-number .num {
+            font-size: 1.8rem;
+        }
+
+        .step-number .text {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+        }
+
+        .step-content {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+
+        .step-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .step-content p {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        .step-content ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .step-content li {
+            padding: 0.5rem 0;
+            color: var(--text-light);
+            display: flex;
+            align-items: start;
+            gap: 0.5rem;
+        }
+
+        .step-content li::before {
+            content: "✓";
+            color: #10b981;
+            font-weight: bold;
+            margin-top: 2px;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 5rem 2rem;
+            background: var(--white);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            text-align: center;
+        }
+
+        .feature-card .icon-wrapper {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 1.5rem;
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(234, 88, 12, 0.1));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .feature-card p {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        /* Success Stories Section */
+        .success-stories {
+            padding: 5rem 2rem;
+            background: #f9fafb;
+        }
+
+        .stories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .story-card {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .story-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .story-image {
+            height: 200px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: var(--white);
+        }
+
+        .story-content {
+            padding: 2rem;
+        }
+
+        .story-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .story-type {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .story-content p {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .story-stats {
+            display: flex;
+            gap: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #f3f4f6;
+        }
+
+        .story-stat {
+            flex: 1;
+        }
+
+        .story-stat .value {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .story-stat .label {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        /* Pricing Section */
+        .pricing {
+            padding: 5rem 2rem;
+            background: var(--white);
+        }
+
+        .pricing-table {
+            max-width: 1000px;
+            margin: 3rem auto;
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: var(--shadow-lg);
+            overflow: hidden;
+        }
+
+        .pricing-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .pricing-header h3 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .pricing-body {
+            padding: 2rem;
+        }
+
+        .pricing-item {
+            display: grid;
+            grid-template-columns: 1fr 200px;
+            gap: 2rem;
+            padding: 1.5rem;
+            border-bottom: 1px solid #f3f4f6;
+            align-items: center;
+        }
+
+        .pricing-item:last-child {
+            border-bottom: none;
+        }
+
+        .pricing-item h4 {
+            font-size: 1.2rem;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .pricing-item p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .pricing-item .price {
+            text-align: right;
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .pricing-item .price span {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            font-weight: normal;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 5rem 2rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .consultation-form {
+            max-width: 600px;
+            margin: 2rem auto;
+            display: grid;
+            gap: 1rem;
+        }
+
+        .form-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .consultation-form input,
+        .consultation-form select {
+            padding: 1rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            width: 100%;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: var(--white);
+            padding: 3rem 2rem 1rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .footer-section p,
+        .footer-section ul {
+            color: #9ca3af;
+            line-height: 1.8;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: #9ca3af;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--primary-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #374151;
+            color: #9ca3af;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                background: var(--white);
+                flex-direction: column;
+                padding: 2rem;
+                box-shadow: var(--shadow);
+                transition: left 0.3s ease;
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .mobile-menu {
+                display: flex;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-stats {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .hero-image {
+                margin-top: 2rem;
+            }
+
+            .form-group {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-item {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .pricing-item .price {
+                text-align: center;
+                margin-top: 1rem;
+            }
+
+            .service-step {
+                grid-template-columns: 60px 1fr;
+                gap: 1rem;
+            }
+
+            .step-number {
+                width: 60px;
+                height: 60px;
+            }
+
+            .step-number .num {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/971507276507?text=Hi%20Rhey%20Business%20Launch,%20I%20need%20help%20opening%20a%20business" 
+       target="_blank" 
+       class="whatsapp-float"
+       title="Chat with us on WhatsApp">
+        <svg viewBox="0 0 32 32" style="width: 28px; height: 28px; fill: white;">
+            <path d="M16.002 0h-.004C7.174 0 0 7.176 0 16c0 3.5 1.128 6.744 3.046 9.378l-1.994 5.944 6.15-1.966C9.732 30.95 12.75 32 16.002 32 24.826 32 32 24.824 32 16S24.826 0 16.002 0zm9.194 22.672c-.386 1.088-1.912 1.992-3.124 2.256-.832.176-1.916.316-5.57-1.2-4.68-1.936-7.696-6.696-7.928-7.004-.226-.308-1.87-2.486-1.87-4.744s1.184-3.368 1.602-3.828c.418-.46.912-.576 1.218-.576.306 0 .612.004.878.016.282.012.66-.106 1.032.788.386.926 1.31 3.198 1.426 3.428.118.23.198.498.042.806-.156.308-.234.5-.46.768-.226.268-.476.598-.68.802-.226.228-.46.476-.198.936.262.46 1.166 1.922 2.502 3.114 1.72 1.536 3.17 2.014 3.62 2.244.45.23.712.192.974-.116.262-.308 1.126-1.31 1.426-1.762.3-.452.6-.376 1.012-.228.412.156 2.608 1.23 3.058 1.454.45.23.75.346.866.53.112.19.112 1.088-.274 2.176z"/>
+        </svg>
+    </a>
+    
+    <style>
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.5);
+            z-index: 999;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.7);
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+        
+        @media (max-width: 768px) {
+            .whatsapp-float {
+                bottom: 20px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+            }
+        }
+    </style>
+
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <a href="#home" class="logo">Rhey Business Launch</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#businesses">Business Types</a></li>
+                <li><a href="#services">Our Process</a></li>
+                <li><a href="#success">Success Stories</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact">Start Now</a></li>
+            </ul>
+            <div class="mobile-menu" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Turn Your <span class="highlight">Business Dream</span> Into Reality</h1>
+                <p>Complete guidance and support to open your restaurant, bakery, gym, or any business venture from concept to grand opening</p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn btn-primary">Start Your Journey</a>
+                    <a href="#businesses" class="btn btn-secondary">Explore Industries</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-box">
+                        <div class="number">500+</div>
+                        <div class="label">Businesses Launched</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="number">95%</div>
+                        <div class="label">Success Rate</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="number">30</div>
+                        <div class="label">Industries Covered</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="business-icon">
+                    <div class="emoji">🍽️</div>
+                    <p>Restaurant</p>
+                </div>
+                <div class="business-icon">
+                    <div class="emoji">🥐</div>
+                    <p>Bakery</p>
+                </div>
+                <div class="business-icon">
+                    <div class="emoji">💪</div>
+                    <p>Gym & Fitness</p>
+                </div>
+                <div class="business-icon">
+                    <div class="emoji">☕</div>
+                    <p>Coffee Shop</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Types Section -->
+    <section class="business-types" id="businesses">
+        <div class="container">
+            <h2 class="section-title">Business Types We Help Launch</h2>
+            <p class="section-subtitle">Expert guidance for every industry, tailored to your specific business needs</p>
+            
+            <div class="business-grid">
+                <div class="business-card">
+                    <div class="icon">🍽️</div>
+                    <h3>Restaurant</h3>
+                    <p>Full-service dining establishment setup including kitchen design, menu development, and staff training</p>
+                    <div class="requirements">Investment: AED 550K-1.8M</div>
+                </div>
+                
+                <div class="business-card">
+                    <div class="icon">🥐</div>
+                    <h3>Bakery & Cafe</h3>
+                    <p>Artisan bakery setup with equipment sourcing, recipe development, and display design</p>
+                    <div class="requirements">Investment: AED 180K-750K</div>
+                </div>
+                
+                <div class="business-card">
+                    <div class="icon">💪</div>
+                    <h3>Gym & Fitness Center</h3>
+                    <p>Complete fitness facility planning including equipment selection and member management systems</p>
+                    <div class="requirements">Investment: AED 370K-1.5M</div>
+                </div>
+                
+                <div class="business-card">
+                    <div class="icon">☕</div>
+                    <h3>Coffee Shop</h3>
+                    <p>Specialty coffee business with barista training, supplier connections, and ambiance design</p>
+                    <div class="requirements">Investment: AED 290K-920K</div>
+                </div>
+                
+                <div class="business-card">
+                    <div class="icon">🛒</div>
+                    <h3>Retail Store</h3>
+                    <p>Retail business setup including inventory management, POS systems, and merchandising</p>
+                    <div class="requirements">Investment: AED 180K-1.1M</div>
+                </div>
+                
+                <div class="business-card">
+                    <div class="icon">💇</div>
+                    <h3>Salon & Spa</h3>
+                    <p>Beauty and wellness center with equipment setup, product sourcing, and service menu design</p>
+                    <div class="requirements">Investment: AED 275K-920K</div>
+                </div>
+                
+                <div class="business-card">
+                    <div class="icon">🏥</div>
+                    <h3>Medical Clinic</h3>
+                    <p>Healthcare facility setup with regulatory compliance, equipment, and practice management</p>
+                    <div class="requirements">Investment: AED 730K-2.9M</div>
+                </div>
+                
+                <div class="business-card">
+                    <div class="icon">🎓</div>
+                    <h3>Education Center</h3>
+                    <p>Training facility or tutoring center with curriculum development and certification assistance</p>
+                    <div class="requirements">Investment: AED 110K-550K</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Process Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Your Path to Business Ownership</h2>
+            <p class="section-subtitle">Our comprehensive 5-step process takes you from idea to grand opening</p>
+            
+            <div class="services-timeline">
+                <div class="service-step">
+                    <div class="step-number">
+                        <div class="num">1</div>
+                        <div class="text">Week 1-2</div>
+                    </div>
+                    <div class="step-content">
+                        <h3>Consultation & Planning</h3>
+                        <p>We analyze your vision, budget, and goals to create a customized business plan</p>
+                        <ul>
+                            <li>Market research and feasibility study</li>
+                            <li>Business model development</li>
+                            <li>Financial projections and ROI analysis</li>
+                            <li>Location scouting and demographic analysis</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-step">
+                    <div class="step-number">
+                        <div class="num">2</div>
+                        <div class="text">Week 3-4</div>
+                    </div>
+                    <div class="step-content">
+                        <h3>Legal & Licensing</h3>
+                        <p>Handle all regulatory requirements and legal documentation</p>
+                        <ul>
+                            <li>Business registration and incorporation</li>
+                            <li>Permits and licenses acquisition</li>
+                            <li>Health and safety compliance</li>
+                            <li>Insurance and liability coverage</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-step">
+                    <div class="step-number">
+                        <div class="num">3</div>
+                        <div class="text">Week 5-8</div>
+                    </div>
+                    <div class="step-content">
+                        <h3>Setup & Build-Out</h3>
+                        <p>Transform your space into a functioning business</p>
+                        <ul>
+                            <li>Interior design and layout planning</li>
+                            <li>Equipment sourcing and installation</li>
+                            <li>Vendor and supplier partnerships</li>
+                            <li>Technology and POS system setup</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-step">
+                    <div class="step-number">
+                        <div class="num">4</div>
+                        <div class="text">Week 9-10</div>
+                    </div>
+                    <div class="step-content">
+                        <h3>Staffing & Training</h3>
+                        <p>Build and prepare your team for success</p>
+                        <ul>
+                            <li>Recruitment and hiring assistance</li>
+                            <li>Staff training programs</li>
+                            <li>Operations manual creation</li>
+                            <li>Management systems implementation</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-step">
+                    <div class="step-number">
+                        <div class="num">5</div>
+                        <div class="text">Week 11-12</div>
+                    </div>
+                    <div class="step-content">
+                        <h3>Launch & Marketing</h3>
+                        <p>Grand opening and ongoing support for growth</p>
+                        <ul>
+                            <li>Marketing strategy and branding</li>
+                            <li>Grand opening event planning</li>
+                            <li>Social media and online presence</li>
+                            <li>90-day post-launch support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose Rhey Business Launch?</h2>
+            <p class="section-subtitle">Complete support system for your entrepreneurial journey</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="icon-wrapper">📋</div>
+                    <h3>End-to-End Solutions</h3>
+                    <p>From initial concept to grand opening, we handle every aspect of launching your business, ensuring nothing is overlooked</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="icon-wrapper">👥</div>
+                    <h3>Industry Experts</h3>
+                    <p>Our team includes specialists in each industry with years of experience launching successful businesses</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="icon-wrapper">💰</div>
+                    <h3>Financing Assistance</h3>
+                    <p>We help secure funding through bank loans, investors, and grant programs tailored to your business type</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="icon-wrapper">🏗️</div>
+                    <h3>Vendor Network</h3>
+                    <p>Access our extensive network of trusted suppliers, contractors, and service providers for better pricing</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="icon-wrapper">📈</div>
+                    <h3>Growth Strategy</h3>
+                    <p>Beyond launch, we provide strategies for scaling, franchising, and expanding your business</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="icon-wrapper">🤝</div>
+                    <h3>Ongoing Support</h3>
+                    <p>90 days of post-launch support plus lifetime access to our business owner community and resources</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories Section -->
+    <section class="success-stories" id="success">
+        <div class="container">
+            <h2 class="section-title">Success Stories</h2>
+            <p class="section-subtitle">Real businesses, real results, real entrepreneurs</p>
+            
+            <div class="stories-grid">
+                <div class="story-card">
+                    <div class="story-image">🍕</div>
+                    <div class="story-content">
+                        <h3>Tony's Pizzeria</h3>
+                        <div class="story-type">Italian Restaurant</div>
+                        <p>From corporate job to restaurant owner in 3 months. Tony's Pizzeria now serves 200+ customers daily and has become a neighborhood favorite.</p>
+                        <div class="story-stats">
+                            <div class="story-stat">
+                                <div class="value">3 months</div>
+                                <div class="label">To Launch</div>
+                            </div>
+                            <div class="story-stat">
+                                <div class="value">AED 1.2M</div>
+                                <div class="label">First Year Revenue</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="story-card">
+                    <div class="story-image">💪</div>
+                    <div class="story-content">
+                        <h3>FitZone Gym</h3>
+                        <div class="story-type">Fitness Center</div>
+                        <p>Personal trainer turned gym owner with 500+ members in the first year. Now expanding to a second location.</p>
+                        <div class="story-stats">
+                            <div class="story-stat">
+                                <div class="value">500+</div>
+                                <div class="label">Members</div>
+                            </div>
+                            <div class="story-stat">
+                                <div class="value">2nd location</div>
+                                <div class="label">Opening Soon</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="story-card">
+                    <div class="story-image">🥐</div>
+                    <div class="story-content">
+                        <h3>Sweet Dreams Bakery</h3>
+                        <div class="story-type">Artisan Bakery</div>
+                        <p>Home baker to successful bakery owner. Now supplies to 15 local cafes and has a thriving retail location.</p>
+                        <div class="story-stats">
+                            <div class="story-stat">
+                                <div class="value">15</div>
+                                <div class="label">B2B Clients</div>
+                            </div>
+                            <div class="story-stat">
+                                <div class="value">250%</div>
+                                <div class="label">Year 1 Growth</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2 class="section-title">Investment & Pricing</h2>
+            <p class="section-subtitle">Transparent pricing for comprehensive business launch services</p>
+            
+            <div class="pricing-table">
+                <div class="pricing-header">
+                    <h3>Complete Business Launch Package</h3>
+                    <p>Everything you need from concept to opening day</p>
+                </div>
+                <div class="pricing-body">
+                    <div class="pricing-item">
+                        <div>
+                            <h4>Initial Consultation</h4>
+                            <p>Business assessment, market research, and feasibility study</p>
+                        </div>
+                        <div class="price">FREE</div>
+                    </div>
+                    
+                    <div class="pricing-item">
+                        <div>
+                            <h4>Business Planning & Strategy</h4>
+                            <p>Complete business plan, financial projections, and funding assistance</p>
+                        </div>
+                        <div class="price">AED 9,200</div>
+                    </div>
+                    
+                    <div class="pricing-item">
+                        <div>
+                            <h4>Legal & Licensing Services</h4>
+                            <p>All permits, licenses, and legal documentation</p>
+                        </div>
+                        <div class="price">AED 12,850</div>
+                    </div>
+                    
+                    <div class="pricing-item">
+                        <div>
+                            <h4>Setup & Operations</h4>
+                            <p>Design, equipment, vendors, and system implementation</p>
+                        </div>
+                        <div class="price">AED 29,400<span> - 55,000</span></div>
+                    </div>
+                    
+                    <div class="pricing-item">
+                        <div>
+                            <h4>Marketing & Launch</h4>
+                            <p>Branding, website, marketing materials, and grand opening</p>
+                        </div>
+                        <div class="price">AED 14,700</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 2rem;">
+                <p style="color: var(--text-light); margin-bottom: 2rem;">
+                    * Total investment varies by business type and size. Payment plans available.
+                </p>
+                <a href="#contact" class="btn btn-primary">Get Custom Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contact">
+        <div class="container">
+            <h2>Ready to Open Your Dream Business?</h2>
+            <p>Schedule your free consultation and take the first step today</p>
+            <div class="cta-buttons" style="margin-bottom: 2rem;">
+                <a href="https://wa.me/971507276507?text=Hi%20Rhey%20Business%20Launch,%20I%20need%20help%20opening%20a%20business" target="_blank" class="btn btn-primary" style="background: #25D366; border: none;">
+                    💬 WhatsApp Us Now
+                </a>
+                <a href="tel:+971507276507" class="btn btn-secondary" style="border-color: white; color: white;">
+                    📞 Call +971 50 727 6507
+                </a>
+            </div>
+            
+            <form class="consultation-form">
+                <div class="form-group">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Email Address" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" placeholder="Phone Number" required>
+                    <select required>
+                        <option value="">Select Business Type</option>
+                        <option>Restaurant</option>
+                        <option>Bakery/Cafe</option>
+                        <option>Gym/Fitness</option>
+                        <option>Coffee Shop</option>
+                        <option>Retail Store</option>
+                        <option>Salon/Spa</option>
+                        <option>Medical Clinic</option>
+                        <option>Education Center</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select required>
+                        <option value="">Investment Budget</option>
+                        <option>Under AED 180,000</option>
+                        <option>AED 180,000 - 370,000</option>
+                        <option>AED 370,000 - 920,000</option>
+                        <option>AED 920,000 - 1,800,000</option>
+                        <option>Over AED 1,800,000</option>
+                    </select>
+                    <select required>
+                        <option value="">Timeline to Launch</option>
+                        <option>Immediately</option>
+                        <option>1-3 months</option>
+                        <option>3-6 months</option>
+                        <option>6-12 months</option>
+                        <option>Just exploring</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary" style="background: white; color: var(--primary-color);">
+                    Get Free Consultation
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Rhey Business Launch</h3>
+                <p>Your trusted partner in business creation. We've helped launch over 500 successful businesses across 30+ industries.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Business Types</h3>
+                <ul>
+                    <li><a href="#">Restaurants</a></li>
+                    <li><a href="#">Bakeries & Cafes</a></li>
+                    <li><a href="#">Gyms & Fitness</a></li>
+                    <li><a href="#">Retail Stores</a></li>
+                    <li><a href="#">Medical Clinics</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#">Business Guides</a></li>
+                    <li><a href="#">Funding Options</a></li>
+                    <li><a href="#">Success Stories</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li>📧 info@rheybusiness.com</li>
+                    <li>📱 +971 50 727 6507</li>
+                    <li>💬 <a href="https://wa.me/971507276507" target="_blank" style="color: #25D366;">WhatsApp Us</a></li>
+                    <li>📍 Business Bay, Dubai</li>
+                    <li>🕒 Sun-Thu: 9AM-6PM</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Rhey Business Launch. All rights reserved. | Privacy Policy | Terms of Service</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    document.querySelector('.nav-links').classList.remove('active');
+                }
+            });
+        });
+
+        // Form submission handling
+        document.querySelector('.consultation-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your interest! We will contact you within 24 hours to schedule your free consultation.');
+            this.reset();
+        });
+
+        // Scroll animations
+        function handleScroll() {
+            const elements = document.querySelectorAll('.business-card, .feature-card, .story-card, .service-step');
+            
+            elements.forEach(element => {
+                const rect = element.getBoundingClientRect();
+                const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+                
+                if (isVisible && !element.classList.contains('fade-in')) {
+                    element.classList.add('fade-in', 'visible');
+                }
+            });
+        }
+
+        // Initialize scroll animations
+        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('load', handleScroll);
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 100) {
+                header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.15)';
+            } else {
+                header.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+            }
+        });
+
+        // Add animation styles
+        const style = document.createElement('style');
+        style.textContent = `
+            .fade-in {
+                opacity: 0;
+                transform: translateY(20px);
+                transition: all 0.6s ease;
+            }
+            .fade-in.visible {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
