@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dalistan Group - Start Your Dream Business Today</title>
+    <title> - Start Your Dream Business Today</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
     <style>
         * {
             margin: 0;
@@ -14,25 +14,25 @@
         }
 
         :root {
-            --primary-color: #f4a261; /* Orange */
-            --secondary-color: #e63946; /* Red */
-            --accent-color: #1a1a1a; /* Black */
-            --text-dark: #1a1a1a; /* Black */
-            --text-light: #6b7280; /* Gray */
-            --bg-light: #f8f9fa; /* Off-white */
-            --white: #ffffff; /* Pure white */
-            --off-white: #f8f9fa; /* Off-white */
-            --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.15);
-            --transition: all 0.3s ease;
+            --primary-color: #1e3a8a; /* Navy Blue */
+            --secondary-color: #d4af37; /* Soft Gold */
+            --accent-color: #333333; /* Charcoal Gray */
+            --text-dark: #333333; /* Charcoal Gray */
+            --text-light: #4b5563; /* Dark Gray */
+            --bg-light: #f5f5f5; /* Light Gray */
+            --white: #ffffff; /* Pure White */
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+            --transition: all 0.3s ease-in-out;
         }
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.7;
+            line-height: 1.8;
             color: var(--text-dark);
             overflow-x: hidden;
             background-color: var(--bg-light);
+            letter-spacing: 0.02em;
         }
 
         /* Navigation */
@@ -56,8 +56,8 @@
 
         .logo {
             font-size: 2rem;
-            font-weight: 800;
-            color: var(--secondary-color);
+            font-weight: 700;
+            color: var(--primary-color);
             text-decoration: none;
             display: flex;
             align-items: center;
@@ -65,7 +65,7 @@
         }
 
         .logo span {
-            color: var(--primary-color);
+            color: var(--secondary-color);
         }
 
         .nav-links {
@@ -77,14 +77,14 @@
         .nav-links a {
             color: var(--text-dark);
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 500;
             font-size: 1.1rem;
             transition: var(--transition);
             position: relative;
         }
 
         .nav-links a:hover {
-            color: var(--primary-color);
+            color: var(--secondary-color);
         }
 
         .nav-links a::after {
@@ -94,7 +94,7 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: var(--primary-color);
+            background: var(--secondary-color);
             transition: var(--transition);
         }
 
@@ -119,8 +119,8 @@
         /* Hero Section */
         .hero {
             margin-top: 80px;
-            padding: 6rem 2rem;
-            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
+            padding: 7rem 2rem;
+            background: linear-gradient(135deg, var(--primary-color) 0%, #2b4cb0 100%);
             color: var(--white);
             position: relative;
             overflow: hidden;
@@ -133,7 +133,7 @@
             right: -50%;
             width: 200%;
             height: 200%;
-            background: radial-gradient(circle, rgba(244, 162, 97, 0.15) 2px, transparent 2px);
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.15) 2px, transparent 2px);
             background-size: 60px 60px;
             animation: drift 30s linear infinite;
         }
@@ -153,7 +153,7 @@
         }
 
         .hero-text h1 {
-            font-size: 3.5rem;
+            font-size: 3.8rem;
             margin-bottom: 1.5rem;
             color: var(--white);
             font-weight: 800;
@@ -162,7 +162,7 @@
         }
 
         .hero-text .highlight {
-            color: var(--primary-color);
+            color: var(--secondary-color);
         }
 
         .hero-text p {
@@ -187,7 +187,7 @@
         .stat-box .number {
             font-size: 2.8rem;
             font-weight: 800;
-            color: var(--primary-color);
+            color: var(--secondary-color);
         }
 
         .stat-box .label {
@@ -204,25 +204,25 @@
         }
 
         .business-icon {
-            background: rgba(255, 255, 255, 0.15);
-            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
             padding: 2rem;
             text-align: center;
             box-shadow: var(--shadow);
             transition: var(--transition);
-            border: 1px solid var(--primary-color);
+            border: 1px solid var(--secondary-color);
         }
 
         .business-icon:hover {
-            transform: translateY(-10px);
+            transform: translateY(-10px) scale(1.02);
             box-shadow: var(--shadow-lg);
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.15);
         }
 
         .business-icon .icon {
             font-size: 3.5rem;
             margin-bottom: 0.75rem;
-            color: var(--primary-color);
+            color: var(--secondary-color);
         }
 
         .business-icon p {
@@ -249,10 +249,10 @@
         }
 
         .btn {
-            padding: 1rem 2.5rem;
+            padding: 1.2rem 3rem;
             font-size: 1.2rem;
             border: none;
-            border-radius: 10px;
+            border-radius: 12px;
             cursor: pointer;
             text-decoration: none;
             transition: var(--transition);
@@ -263,14 +263,14 @@
         }
 
         .btn-primary {
-            background: var(--primary-color);
-            color: var(--accent-color);
+            background: var(--secondary-color);
+            color: var(--white);
             box-shadow: var(--shadow);
         }
 
         .btn-primary:hover {
-            background: #ffba7b;
-            transform: translateY(-3px);
+            background: #e6c74c;
+            transform: translateY(-3px) scale(1.02);
             box-shadow: var(--shadow-lg);
         }
 
@@ -281,14 +281,14 @@
         }
 
         .btn-secondary:hover {
-            background: var(--primary-color);
-            color: var(--accent-color);
-            border-color: var(--primary-color);
+            background: var(--secondary-color);
+            color: var(--white);
+            border-color: var(--secondary-color);
         }
 
         /* Business Types Section */
         .business-types {
-            padding: 6rem 2rem;
+            padding: 7rem 2rem;
             background: var(--white);
         }
 
@@ -299,9 +299,9 @@
 
         .section-title {
             text-align: center;
-            font-size: 3rem;
+            font-size: 3.2rem;
             margin-bottom: 1.5rem;
-            color: var(--secondary-color);
+            color: var(--primary-color);
             font-weight: 800;
             position: relative;
         }
@@ -314,14 +314,14 @@
             transform: translateX(-50%);
             width: 100px;
             height: 5px;
-            background: var(--primary-color);
+            background: var(--secondary-color);
             border-radius: 3px;
         }
 
         .section-subtitle {
             text-align: center;
             font-size: 1.2rem;
-            color: var(--text-dark);
+            color: var(--text-light);
             margin-bottom: 3.5rem;
             max-width: 700px;
             margin-left: auto;
@@ -339,26 +339,26 @@
             background: var(--white);
             border: 1px solid #e5e7eb;
             padding: 2.5rem;
-            border-radius: 16px;
+            border-radius: 20px;
             text-align: center;
             transition: var(--transition);
             box-shadow: var(--shadow);
         }
 
         .business-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-10px) scale(1.02);
             box-shadow: var(--shadow-lg);
-            border-color: var(--primary-color);
+            border-color: var(--secondary-color);
         }
 
         .business-card .icon {
             font-size: 3.5rem;
             margin-bottom: 1.5rem;
-            color: var(--secondary-color);
+            color: var(--primary-color);
         }
 
         .business-card h3 {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             margin-bottom: 1rem;
             color: var(--accent-color);
             font-weight: 700;
@@ -372,8 +372,8 @@
 
         /* Services Section */
         .services {
-            padding: 6rem 2rem;
-            background: var(--off-white);
+            padding: 7rem 2rem;
+            background: var(--bg-light);
         }
 
         .services-timeline {
@@ -418,7 +418,7 @@
             padding: 2rem;
             border-radius: 12px;
             box-shadow: var(--shadow);
-            border-left: 5px solid var(--primary-color);
+            border-left: 5px solid var(--secondary-color);
         }
 
         .step-content h3 {
@@ -448,14 +448,14 @@
 
         .step-content li::before {
             content: "✓";
-            color: var(--secondary-color);
+            color: var(--primary-color);
             font-weight: bold;
             margin-top: 3px;
         }
 
         /* Features Section */
         .features {
-            padding: 6rem 2rem;
+            padding: 7rem 2rem;
             background: var(--white);
         }
 
@@ -469,14 +469,14 @@
         .feature-card {
             text-align: center;
             padding: 2.5rem;
-            border-radius: 16px;
+            border-radius: 20px;
             transition: var(--transition);
-            background: var(--off-white);
+            background: var(--bg-light);
             box-shadow: var(--shadow);
         }
 
         .feature-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-5px) scale(1.02);
             box-shadow: var(--shadow-lg);
         }
 
@@ -484,17 +484,17 @@
             width: 110px;
             height: 110px;
             margin: 0 auto 1.5rem;
-            background: linear-gradient(135deg, rgba(244, 162, 97, 0.15), rgba(230, 57, 70, 0.15));
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.15), rgba(30, 58, 138, 0.15));
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 2.8rem;
-            color: var(--secondary-color);
+            color: var(--primary-color);
         }
 
         .feature-card h3 {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             margin-bottom: 1rem;
             color: var(--accent-color);
             font-weight: 700;
@@ -507,7 +507,7 @@
 
         /* Portfolio Section */
         .portfolio {
-            padding: 6rem 2rem;
+            padding: 7rem 2rem;
             background: var(--white);
         }
 
@@ -520,28 +520,45 @@
 
         .portfolio-item {
             background: var(--white);
-            border-radius: 16px;
+            border-radius: 20px;
             overflow: hidden;
             box-shadow: var(--shadow);
             transition: var(--transition);
         }
 
         .portfolio-item:hover {
-            transform: translateY(-5px);
+            transform: translateY(-5px) scale(1.02);
             box-shadow: var(--shadow-lg);
         }
 
         .portfolio-image {
             height: 220px;
-            background-size: contain;
-            background-position: center;
-            background-repeat: no-repeat;
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
-            background-color: var(--off-white);
-            border-bottom: 3px solid var(--primary-color);
+            background-color: var(--bg-light);
+            border-bottom: 3px solid var(--secondary-color);
+            overflow: hidden;
+        }
+
+        .portfolio-image img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+
+        .portfolio-image img[alt]:not([src]) {
+            background: var(--bg-light);
+            color: var(--text-light);
+            font-size: 1rem;
+            text-align: center;
+            padding: 1rem;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .portfolio-image::after {
@@ -559,7 +576,7 @@
         }
 
         .portfolio-content h3 {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             margin-bottom: 0.75rem;
             color: var(--accent-color);
             font-weight: 700;
@@ -573,14 +590,14 @@
 
         /* CTA Section */
         .cta-section {
-            padding: 6rem 2rem;
-            background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+            padding: 7rem 2rem;
+            background: linear-gradient(135deg, var(--primary-color), #2b4cb0);
             color: var(--white);
             text-align: center;
         }
 
         .cta-section h2 {
-            font-size: 3rem;
+            font-size: 3.2rem;
             margin-bottom: 1.5rem;
             font-weight: 800;
         }
@@ -608,7 +625,7 @@
         .consultation-form select {
             padding: 1.2rem;
             border: none;
-            border-radius: 10px;
+            border-radius: 12px;
             font-size: 1.1rem;
             width: 100%;
             background: rgba(255, 255, 255, 0.95);
@@ -618,7 +635,7 @@
         .consultation-form input:focus,
         .consultation-form select:focus {
             outline: none;
-            box-shadow: 0 0 0 3px rgba(244, 162, 97, 0.3);
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.3);
         }
 
         /* Footer */
@@ -639,7 +656,7 @@
 
         .footer-section h3 {
             margin-bottom: 1.5rem;
-            color: var(--primary-color);
+            color: var(--secondary-color);
             font-weight: 700;
         }
 
@@ -664,7 +681,7 @@
         }
 
         .footer-section a:hover {
-            color: var(--primary-color);
+            color: var(--secondary-color);
         }
 
         .footer-bottom {
@@ -705,8 +722,8 @@
 
         /* Logo Showcase Section */
         .logo-showcase {
-            padding: 6rem 2rem;
-            background: var(--off-white);
+            padding: 7rem 2rem;
+            background: var(--bg-light);
         }
 
         .logo-grid {
@@ -718,7 +735,7 @@
 
         .logo-item {
             background: var(--white);
-            border-radius: 16px;
+            border-radius: 20px;
             overflow: hidden;
             box-shadow: var(--shadow);
             transition: var(--transition);
@@ -727,22 +744,43 @@
         }
 
         .logo-item:hover {
-            transform: translateY(-5px);
+            transform: translateY(-5px) scale(1.02);
             box-shadow: var(--shadow-lg);
         }
 
         .logo-image {
             height: 160px;
-            background-size: contain;
-            background-position: center;
-            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             margin-bottom: 1.5rem;
-            border: 2px solid var(--primary-color);
-            border-radius: 8px;
+            border: 2px solid var(--secondary-color);
+            border-radius: 12px;
+            overflow: hidden;
+            background-color: var(--bg-light);
+        }
+
+        .logo-image img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+
+        .logo-image img[alt]:not([src]) {
+            background: var(--bg-light);
+            color: var(--text-light);
+            font-size: 1rem;
+            text-align: center;
+            padding: 1rem;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .logo-item h3 {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             color: var(--accent-color);
             font-weight: 700;
         }
@@ -818,7 +856,7 @@
     <!-- Navigation -->
     <header>
         <nav>
-            <a href="#home" class="logo">Dalistan<span>Group</span></a>
+            <a href="#home" class="logo">Dalistan<span>Business Group</span></a>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#businesses">Business Types</a></li>
@@ -840,7 +878,7 @@
         <div class="hero-content">
             <div class="hero-text">
                 <h1>Turn Your <span class="highlight">Business Dream</span> Into Reality</h1>
-                <p>Complete guidance and support to open your restaurant, bakery, gym, or any business venture from concept to grand opening</p>
+                <p>Complete guidance and support to open your restaurant, bakery, coffee shop, or any small business from concept to grand opening</p>
                 <div class="cta-buttons">
                     <a href="#contact" class="btn btn-primary">
                         <i class="fas fa-rocket"></i> Start Your Journey
@@ -874,12 +912,12 @@
                     <p>Bakery</p>
                 </div>
                 <div class="business-icon">
-                    <div class="icon"><i class="fas fa-dumbbell"></i></div>
-                    <p>Gym & Fitness</p>
-                </div>
-                <div class="business-icon">
                     <div class="icon"><i class="fas fa-coffee"></i></div>
                     <p>Coffee Shop</p>
+                </div>
+                <div class="business-icon">
+                    <div class="icon"><i class="fas fa-briefcase"></i></div>
+                    <p>Other Small Businesses</p>
                 </div>
             </div>
         </div>
@@ -900,14 +938,8 @@
                 
                 <div class="business-card">
                     <div class="icon"><i class="fas fa-bread-slice"></i></div>
-                    <h3>Bakery & Cafe</h3>
+                    <h3>Bakery</h3>
                     <p>Artisan bakery setup with equipment sourcing, recipe development, and display design</p>
-                </div>
-                
-                <div class="business-card">
-                    <div class="icon"><i class="fas fa-dumbbell"></i></div>
-                    <h3>Gym & Fitness Center</h3>
-                    <p>Complete fitness facility planning including equipment selection and member management systems</p>
                 </div>
                 
                 <div class="business-card">
@@ -917,15 +949,9 @@
                 </div>
                 
                 <div class="business-card">
-                    <div class="icon"><i class="fas fa-store"></i></div>
-                    <h3>Retail Store</h3>
-                    <p>Retail business setup including inventory management, POS systems, and merchandising</p>
-                </div>
-                
-                <div class="business-card">
-                    <div class="icon"><i class="fas fa-spa"></i></div>
-                    <h3>Salon & Spa</h3>
-                    <p>Beauty and wellness business with equipment setup, staff training, and service menu development</p>
+                    <div class="icon"><i class="fas fa-briefcase"></i></div>
+                    <h3>Other Small Businesses</h3>
+                    <p>Customized support for various small business ventures, including retail, food trucks, and specialty services</p>
                 </div>
             </div>
         </div>
@@ -1079,65 +1105,73 @@
             <p class="section-subtitle">A showcase of our most recent business launches</p>
             
             <div class="portfolio-grid">
-                <!-- SHAWARMA XPRESS -->
                 <div class="portfolio-item">
-                    <div class="portfolio-image" style="background-image: url('images/shawarmaxpress.png');"></div>
+                    <div class="portfolio-image">
+                        <img src="images/shawarmaxpress.png" alt="Shawarma Xpress Logo">
+                    </div>
                     <div class="portfolio-content">
                         <h3>SHAWARMA XPRESS</h3>
                         <p>Fast-casual Middle Eastern restaurant specializing in authentic shawarma and mezze. Successfully launched in high-traffic shopping district.</p>
                     </div>
                 </div>
-                <!-- CHO LAB BAKERY -->
                 <div class="portfolio-item">
-                    <div class="portfolio-image" style="background-image: url('images/cholab.png');"></div>
+                    <div class="portfolio-image">
+                        <img src="images/cholab.png" alt="Cho Lab Bakery Logo">
+                    </div>
                     <div class="portfolio-content">
                         <h3>CHO LAB BAKERY</h3>
                         <p>Artisan bakery offering a variety of sweet cakes and pastries.</p>
                     </div>
                 </div> 
-                <!-- TAWOOK HEROES -->
                 <div class="portfolio-item">
-                    <div class="portfolio-image" style="background-image: url('images/tawook.png');"></div>
+                    <div class="portfolio-image">
+                        <img src="images/tawook.png" alt="Tawook Heroes Logo">
+                    </div>
                     <div class="portfolio-content">
                         <h3>TAWOOK HEROES</h3>
                         <p>Specialty grilled chicken restaurant focusing on premium tawook dishes. Now operating three locations across the city.</p>
                     </div>
                 </div>
-                <!-- DR. BURGER -->
                 <div class="portfolio-item">
-                    <div class="portfolio-image" style="background-image: url('images/drburger.png');"></div>
+                    <div class="portfolio-image">
+                        <img src="images/drburger.png" alt="Dr. Burger Logo">
+                    </div>
                     <div class="portfolio-content">
                         <h3>DR. BURGER</h3>
                         <p>Gourmet burger joint with unique flavor combinations and premium ingredients. Quickly became a local favorite.</p>
                     </div>
                 </div>
-                <!-- WRAP ZONE -->
                 <div class="portfolio-item">
-                    <div class="portfolio-image" style="background-image: url('images/wrapzone.png');"></div>
+                    <div class="portfolio-image">
+                        <img src="images/wrapzone.png" alt="Wrap Zone Logo">
+                    </div>
                     <div class="portfolio-content">
                         <h3>WRAP ZONE</h3>
                         <p>Healthy fast-food concept offering customizable wraps and bowls. Popular lunch destination for office workers.</p>
                     </div>
                 </div>
-                <!-- EMIRATI FISH AND CHIPS -->
                 <div class="portfolio-item">
-                    <div class="portfolio-image" style="background-image: url('images/emirati.png');"></div>
+                    <div class="portfolio-image">
+                        <img src="images/emirati.png" alt="Emirati Fish and Chips Logo">
+                    </div>
                     <div class="portfolio-content">
                         <h3>EMIRATI FISH AND CHIPS</h3>
                         <p>Fusion concept combining traditional British fish and chips with Emirati flavors. Unique offering in the seafood market.</p>
                     </div>
                 </div>
-                <!-- THAI MOON -->
                 <div class="portfolio-item">
-                    <div class="portfolio-image" style="background-image: url('images/thaimoon.png');"></div>
+                    <div class="portfolio-image">
+                        <img src="images/thaimoon.png" alt="Thai Moon Logo">
+                    </div>
                     <div class="portfolio-content">
                         <h3>THAI MOON</h3>
                         <p>Authentic Thai restaurant with elegant ambiance and traditional recipes. Received local food critic awards.</p>
                     </div>
                 </div>
-                <!-- MR. KITCHENS -->
                 <div class="portfolio-item">
-                    <div class="portfolio-image" style="background-image: url('images/mrkitchen.png');"></div>
+                    <div class="portfolio-image">
+                        <img src="images/mrkitchen.png" alt="Mr. Kitchens Logo">
+                    </div>
                     <div class="portfolio-content">
                         <h3>MR. KITCHENS</h3>
                         <p>Multi-cuisine food hall concept with various kitchen stations. Popular venue for diverse dining preferences.</p>
@@ -1154,39 +1188,46 @@
             <p class="section-subtitle">Discover the successful brands we've helped launch and grow</p>
             
             <div class="logo-grid">
-                <!-- SHAWARMA XPRESS -->
                 <div class="logo-item">
-                    <div class="logo-image" style="background-image: url('images/shawarmaxpress.png');"></div>
+                    <div class="logo-image">
+                        <img src="images/shawarmaxpress.png" alt="Shawarma Xpress Logo">
+                    </div>
                     <h3>SHAWARMA XPRESS</h3>
                 </div>
-                <!-- TAWOOK HEROES -->
                 <div class="logo-item">
-                    <div class="logo-image" style="background-image: url('images/tawook.png');"></div>
+                    <div class="logo-image">
+                        <img src="images/tawook.png" alt="Tawook Heroes Logo">
+                    </div>
                     <h3>TAWOOK HEROES</h3>
                 </div>
-                <!-- DR. BURGER -->
                 <div class="logo-item">
-                    <div class="logo-image" style="background-image: url('images/drburger.png');"></div>
+                    <div class="logo-image">
+                        <img src="images/drburger.png" alt="Dr. Burger Logo">
+                    </div>
                     <h3>DR. BURGER</h3>
                 </div>
-                <!-- WRAP ZONE -->
                 <div class="logo-item">
-                    <div class="logo-image" style="background-image: url('images/wrapzone.png');"></div>
+                    <div class="logo-image">
+                        <img src="images/wrapzone.png" alt="Wrap Zone Logo">
+                    </div>
                     <h3>WRAP ZONE</h3>
                 </div>
-                <!-- EMIRATI FISH AND CHIPS -->
                 <div class="logo-item">
-                    <div class="logo-image" style="background-image: url('images/emirati.png');"></div>
+                    <div class="logo-image">
+                        <img src="images/emirati.png" alt="Emirati Fish and Chips Logo">
+                    </div>
                     <h3>EMIRATI FISH AND CHIPS</h3>
                 </div>
-                <!-- THAI MOON -->
                 <div class="logo-item">
-                    <div class="logo-image" style="background-image: url('images/thaimoon.png');"></div>
+                    <div class="logo-image">
+                        <img src="images/thaimoon.png" alt="Thai Moon Logo">
+                    </div>
                     <h3>THAI MOON</h3>
                 </div>
-                <!-- MR. KITCHENS -->
                 <div class="logo-item">
-                    <div class="logo-image" style="background-image: url('images/mrkitchen.png');"></div>
+                    <div class="logo-image">
+                        <img src="images/mrkitchen.png" alt="Mr. Kitchens Logo">
+                    </div>
                     <h3>MR. KITCHENS</h3>
                 </div>
             </div>
@@ -1217,12 +1258,9 @@
                     <select required>
                         <option value="">Select Business Type</option>
                         <option>Restaurant</option>
-                        <option>Bakery/Cafe</option>
-                        <option>Gym/Fitness</option>
+                        <option>Bakery</option>
                         <option>Coffee Shop</option>
-                        <option>Retail Store</option>
-                        <option>Salon/Spa</option>
-                        <option>Other</option>
+                        <option>Other Small Businesses</option>
                     </select>
                 </div>
                 <div class="form-group">
@@ -1243,7 +1281,7 @@
                         <option>Just exploring</option>
                     </select>
                 </div>
-                <button type="submit" class="btn btn-primary" style="background: var(--primary-color); color: var(--accent-color);">
+                <button type="submit" class="btn btn-primary" style="background: var(--secondary-color); color: var(--white);">
                     <i class="fas fa-calendar-check"></i> Get Free Consultation
                 </button>
             </form>
@@ -1257,7 +1295,7 @@
                 <h3>About Dalistan Group</h3>
                 <p>Your trusted partner in business creation. We've helped launch over 500 successful businesses across 30+ industries.</p>
                 <div style="margin-top: 1rem;">
-                    <a href="https://www.linkedin.com/in/reynaldo-dalistan-96109174/" target="_blank" style="color: var(--primary-color); text-decoration: none;">
+                    <a href="https://www.linkedin.com/in/reynaldo-dalistan-96109174/" target="_blank" style="color: var(--secondary-color); text-decoration: none;">
                         <i class="fab fa-linkedin"></i> <strong>LinkedIn Profile</strong>
                     </a>
                 </div>
@@ -1267,9 +1305,9 @@
                 <h3>Business Types</h3>
                 <ul>
                     <li><a href="#">Restaurants</a></li>
-                    <li><a href="#">Bakeries & Cafes</a></li>
-                    <li><a href="#">Gyms & Fitness</a></li>
-                    <li><a href="#">Retail Stores</a></li>
+                    <li><a href="#">Bakeries</a></li>
+                    <li><a href="#">Coffee Shops</a></li>
+                    <li><a href="#">Other Small Businesses</a></li>
                 </ul>
             </div>
             
@@ -1297,7 +1335,7 @@
         </div>
         
         <div class="footer-bottom">
-            <p>&copy; 2025 Dalistan Group. All rights reserved. | <a href="#" style="color: var(--primary-color);">Privacy Policy</a> | <a href="#" style="color: var(--primary-color);">Terms of Service</a></p>
+            <p>&copy; 2025 Dalistan Group. All rights reserved. | <a href="#" style="color: var(--secondary-color);">Privacy Policy</a> | <a href="#" style="color: var(--secondary-color);">Terms of Service</a></p>
         </div>
     </footer>
 
@@ -1318,7 +1356,6 @@
                         behavior: 'smooth',
                         block: 'start'
                     });
-                    // Close mobile menu if open
                     document.querySelector('.nav-links').classList.remove('active');
                 }
             });
@@ -1345,7 +1382,6 @@
             });
         }
 
-        // Initialize scroll animations
         window.addEventListener('scroll', handleScroll);
         window.addEventListener('load', handleScroll);
 
@@ -1355,9 +1391,9 @@
             const currentScroll = window.pageYOffset;
             
             if (currentScroll > 100) {
-                header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.15)';
+                header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.12)';
             } else {
-                header.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)';
+                header.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.08)';
             }
         });
 
@@ -1367,7 +1403,7 @@
             .fade-in {
                 opacity: 0;
                 transform: translateY(20px);
-                transition: all 0.6s ease;
+                transition: all 0.6s ease-in-out;
             }
             .fade-in.visible {
                 opacity: 1;
