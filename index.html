@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dalistan Group - Start Your Dream Business Today</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap">
     <style>
         * {
             margin: 0;
@@ -12,22 +14,25 @@
         }
 
         :root {
-            --primary-color: #f59e0b;
-            --secondary-color: #ea580c;
-            --accent-color: #06b6d4;
-            --text-dark: #111827;
-            --text-light: #6b7280;
-            --bg-light: #fef3c7;
-            --white: #ffffff;
-            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
+            --primary-color: #f4a261; /* Orange */
+            --secondary-color: #e63946; /* Red */
+            --accent-color: #1a1a1a; /* Black */
+            --text-dark: #1a1a1a; /* Black */
+            --text-light: #6b7280; /* Gray */
+            --bg-light: #f8f9fa; /* Off-white */
+            --white: #ffffff; /* Pure white */
+            --off-white: #f8f9fa; /* Off-white */
+            --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.15);
+            --transition: all 0.3s ease;
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
             color: var(--text-dark);
             overflow-x: hidden;
+            background-color: var(--bg-light);
         }
 
         /* Navigation */
@@ -35,50 +40,46 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(10px);
+            background: var(--white);
             box-shadow: var(--shadow);
             z-index: 1000;
-            transition: all 0.3s ease;
         }
 
         nav {
-            max-width: 1200px;
+            max-width: 1280px;
             margin: 0 auto;
-            padding: 1rem 2rem;
+            padding: 1.5rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--secondary-color);
             text-decoration: none;
             display: flex;
             align-items: center;
             gap: 0.5rem;
         }
 
-        .logo::before {
-            content: "🚀";
-            font-size: 1.5rem;
+        .logo span {
+            color: var(--primary-color);
         }
 
         .nav-links {
             display: flex;
-            gap: 2rem;
+            gap: 2.5rem;
             list-style: none;
         }
 
         .nav-links a {
             color: var(--text-dark);
             text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: var(--transition);
             position: relative;
         }
 
@@ -94,7 +95,7 @@
             width: 0;
             height: 2px;
             background: var(--primary-color);
-            transition: width 0.3s ease;
+            transition: var(--transition);
         }
 
         .nav-links a:hover::after {
@@ -104,22 +105,23 @@
         .mobile-menu {
             display: none;
             flex-direction: column;
-            gap: 4px;
+            gap: 5px;
             cursor: pointer;
         }
 
         .mobile-menu span {
-            width: 25px;
-            height: 3px;
+            width: 30px;
+            height: 4px;
             background: var(--text-dark);
-            transition: 0.3s;
+            transition: var(--transition);
         }
 
         /* Hero Section */
         .hero {
             margin-top: 80px;
-            padding: 5rem 2rem;
-            background: linear-gradient(135deg, #fef3c7 0%, #fed7aa 100%);
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
+            color: var(--white);
             position: relative;
             overflow: hidden;
         }
@@ -131,31 +133,31 @@
             right: -50%;
             width: 200%;
             height: 200%;
-            background: radial-gradient(circle, rgba(245, 158, 11, 0.1) 1px, transparent 1px);
-            background-size: 50px 50px;
-            animation: drift 25s linear infinite;
+            background: radial-gradient(circle, rgba(244, 162, 97, 0.15) 2px, transparent 2px);
+            background-size: 60px 60px;
+            animation: drift 30s linear infinite;
         }
 
         @keyframes drift {
             0% { transform: translate(0, 0); }
-            100% { transform: translate(50px, 50px); }
+            100% { transform: translate(60px, 60px); }
         }
 
         .hero-content {
-            max-width: 1200px;
+            max-width: 1280px;
             margin: 0 auto;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            gap: 5rem;
             align-items: center;
-            position: relative;
-            z-index: 1;
         }
 
         .hero-text h1 {
             font-size: 3.5rem;
             margin-bottom: 1.5rem;
-            color: var(--text-dark);
+            color: var(--white);
+            font-weight: 800;
+            line-height: 1.2;
             animation: fadeInUp 1s ease;
         }
 
@@ -166,7 +168,7 @@
         .hero-text p {
             font-size: 1.3rem;
             margin-bottom: 2rem;
-            color: var(--text-light);
+            color: rgba(255, 255, 255, 0.9);
             animation: fadeInUp 1s ease 0.2s backwards;
         }
 
@@ -183,45 +185,50 @@
         }
 
         .stat-box .number {
-            font-size: 2.5rem;
-            font-weight: bold;
+            font-size: 2.8rem;
+            font-weight: 800;
             color: var(--primary-color);
         }
 
         .stat-box .label {
-            color: var(--text-light);
-            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 1rem;
+            text-transform: uppercase;
         }
 
         .hero-image {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 1rem;
+            gap: 1.5rem;
             animation: fadeInUp 1s ease 0.6s backwards;
         }
 
         .business-icon {
-            background: var(--white);
-            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 16px;
             padding: 2rem;
             text-align: center;
             box-shadow: var(--shadow);
-            transition: transform 0.3s ease;
+            transition: var(--transition);
+            border: 1px solid var(--primary-color);
         }
 
         .business-icon:hover {
             transform: translateY(-10px);
             box-shadow: var(--shadow-lg);
+            background: rgba(255, 255, 255, 0.2);
         }
 
-        .business-icon .emoji {
-            font-size: 3rem;
-            margin-bottom: 0.5rem;
+        .business-icon .icon {
+            font-size: 3.5rem;
+            margin-bottom: 0.75rem;
+            color: var(--primary-color);
         }
 
         .business-icon p {
-            color: var(--text-dark);
+            color: var(--white);
             font-weight: 600;
+            font-size: 1.1rem;
         }
 
         @keyframes fadeInUp {
@@ -237,101 +244,105 @@
 
         .cta-buttons {
             display: flex;
-            gap: 1rem;
+            gap: 1.5rem;
             flex-wrap: wrap;
         }
 
         .btn {
-            padding: 1rem 2rem;
-            font-size: 1.1rem;
+            padding: 1rem 2.5rem;
+            font-size: 1.2rem;
             border: none;
-            border-radius: 50px;
+            border-radius: 10px;
             cursor: pointer;
             text-decoration: none;
-            transition: all 0.3s ease;
-            display: inline-block;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
             font-weight: 600;
         }
 
         .btn-primary {
             background: var(--primary-color);
-            color: var(--white);
+            color: var(--accent-color);
             box-shadow: var(--shadow);
         }
 
         .btn-primary:hover {
-            background: var(--secondary-color);
+            background: #ffba7b;
             transform: translateY(-3px);
             box-shadow: var(--shadow-lg);
         }
 
         .btn-secondary {
             background: transparent;
-            color: var(--primary-color);
-            border: 2px solid var(--primary-color);
+            color: var(--white);
+            border: 2px solid var(--white);
         }
 
         .btn-secondary:hover {
             background: var(--primary-color);
-            color: var(--white);
+            color: var(--accent-color);
+            border-color: var(--primary-color);
         }
 
         /* Business Types Section */
         .business-types {
-            padding: 5rem 2rem;
+            padding: 6rem 2rem;
             background: var(--white);
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1280px;
             margin: 0 auto;
         }
 
         .section-title {
             text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: var(--text-dark);
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--secondary-color);
+            font-weight: 800;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 5px;
+            background: var(--primary-color);
+            border-radius: 3px;
         }
 
         .section-subtitle {
             text-align: center;
-            font-size: 1.1rem;
-            color: var(--text-light);
-            margin-bottom: 3rem;
-            max-width: 600px;
+            font-size: 1.2rem;
+            color: var(--text-dark);
+            margin-bottom: 3.5rem;
+            max-width: 700px;
             margin-left: auto;
             margin-right: auto;
         }
 
         .business-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
             margin-top: 3rem;
         }
 
         .business-card {
             background: var(--white);
-            border: 2px solid #f3f4f6;
-            padding: 2rem;
-            border-radius: 12px;
+            border: 1px solid #e5e7eb;
+            padding: 2.5rem;
+            border-radius: 16px;
             text-align: center;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .business-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
         }
 
         .business-card:hover {
@@ -340,44 +351,33 @@
             border-color: var(--primary-color);
         }
 
-        .business-card:hover::before {
-            transform: scaleX(1);
-        }
-
         .business-card .icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--secondary-color);
         }
 
         .business-card h3 {
-            font-size: 1.3rem;
+            font-size: 1.5rem;
             margin-bottom: 1rem;
-            color: var(--text-dark);
+            color: var(--accent-color);
+            font-weight: 700;
         }
 
         .business-card p {
             color: var(--text-light);
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
-        .business-card .requirements {
-            margin-top: 1rem;
-            padding-top: 1rem;
-            border-top: 1px solid #f3f4f6;
-            font-size: 0.85rem;
-            color: var(--primary-color);
-            font-weight: 600;
+            font-size: 1rem;
+            line-height: 1.7;
         }
 
         /* Services Section */
         .services {
-            padding: 5rem 2rem;
-            background: linear-gradient(to bottom, #fef3c7, #ffffff);
+            padding: 6rem 2rem;
+            background: var(--off-white);
         }
 
         .services-timeline {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 3rem auto;
             display: grid;
             gap: 3rem;
@@ -385,14 +385,14 @@
 
         .service-step {
             display: grid;
-            grid-template-columns: 80px 1fr;
+            grid-template-columns: 90px 1fr;
             gap: 2rem;
             align-items: start;
         }
 
         .step-number {
-            width: 80px;
-            height: 80px;
+            width: 90px;
+            height: 90px;
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             color: var(--white);
             border-radius: 50%;
@@ -400,16 +400,16 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            font-weight: bold;
+            font-weight: 700;
             box-shadow: var(--shadow);
         }
 
         .step-number .num {
-            font-size: 1.8rem;
+            font-size: 2rem;
         }
 
         .step-number .text {
-            font-size: 0.7rem;
+            font-size: 0.8rem;
             text-transform: uppercase;
         }
 
@@ -418,12 +418,14 @@
             padding: 2rem;
             border-radius: 12px;
             box-shadow: var(--shadow);
+            border-left: 5px solid var(--primary-color);
         }
 
         .step-content h3 {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             margin-bottom: 1rem;
-            color: var(--text-dark);
+            color: var(--accent-color);
+            font-weight: 700;
         }
 
         .step-content p {
@@ -437,53 +439,65 @@
         }
 
         .step-content li {
-            padding: 0.5rem 0;
-            color: var(--text-light);
+            padding: 0.75rem 0;
+            color: var(--text-dark);
             display: flex;
             align-items: start;
-            gap: 0.5rem;
+            gap: 0.75rem;
         }
 
         .step-content li::before {
             content: "✓";
-            color: #10b981;
+            color: var(--secondary-color);
             font-weight: bold;
-            margin-top: 2px;
+            margin-top: 3px;
         }
 
         /* Features Section */
         .features {
-            padding: 5rem 2rem;
+            padding: 6rem 2rem;
             background: var(--white);
         }
 
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 3rem;
             margin-top: 3rem;
         }
 
         .feature-card {
             text-align: center;
+            padding: 2.5rem;
+            border-radius: 16px;
+            transition: var(--transition);
+            background: var(--off-white);
+            box-shadow: var(--shadow);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
         }
 
         .feature-card .icon-wrapper {
-            width: 100px;
-            height: 100px;
+            width: 110px;
+            height: 110px;
             margin: 0 auto 1.5rem;
-            background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(234, 88, 12, 0.1));
+            background: linear-gradient(135deg, rgba(244, 162, 97, 0.15), rgba(230, 57, 70, 0.15));
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2.5rem;
+            font-size: 2.8rem;
+            color: var(--secondary-color);
         }
 
         .feature-card h3 {
-            font-size: 1.3rem;
+            font-size: 1.5rem;
             margin-bottom: 1rem;
-            color: var(--text-dark);
+            color: var(--accent-color);
+            font-weight: 700;
         }
 
         .feature-card p {
@@ -491,220 +505,147 @@
             line-height: 1.8;
         }
 
-        /* Success Stories Section */
-        .success-stories {
-            padding: 5rem 2rem;
-            background: #f9fafb;
+        /* Portfolio Section */
+        .portfolio {
+            padding: 6rem 2rem;
+            background: var(--white);
         }
 
-        .stories-grid {
+        .portfolio-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
             margin-top: 3rem;
         }
 
-        .story-card {
+        .portfolio-item {
             background: var(--white);
-            border-radius: 12px;
+            border-radius: 16px;
             overflow: hidden;
             box-shadow: var(--shadow);
-            transition: transform 0.3s ease;
+            transition: var(--transition);
         }
 
-        .story-card:hover {
+        .portfolio-item:hover {
             transform: translateY(-5px);
             box-shadow: var(--shadow-lg);
         }
 
-        .story-image {
-            height: 200px;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        .portfolio-image {
+            height: 220px;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 4rem;
-            color: var(--white);
+            position: relative;
+            background-color: var(--off-white);
+            border-bottom: 3px solid var(--primary-color);
         }
 
-        .story-content {
+        .portfolio-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.05);
+        }
+
+        .portfolio-content {
             padding: 2rem;
         }
 
-        .story-content h3 {
+        .portfolio-content h3 {
             font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-            color: var(--text-dark);
+            margin-bottom: 0.75rem;
+            color: var(--accent-color);
+            font-weight: 700;
         }
 
-        .story-type {
-            color: var(--primary-color);
-            font-weight: 600;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
-
-        .story-content p {
+        .portfolio-content p {
             color: var(--text-light);
-            margin-bottom: 1rem;
-            line-height: 1.6;
-        }
-
-        .story-stats {
-            display: flex;
-            gap: 2rem;
-            padding-top: 1rem;
-            border-top: 1px solid #f3f4f6;
-        }
-
-        .story-stat {
-            flex: 1;
-        }
-
-        .story-stat .value {
-            font-size: 1.3rem;
-            font-weight: bold;
-            color: var(--primary-color);
-        }
-
-        .story-stat .label {
-            font-size: 0.85rem;
-            color: var(--text-light);
-        }
-
-        /* Pricing Section */
-        .pricing {
-            padding: 5rem 2rem;
-            background: var(--white);
-        }
-
-        .pricing-table {
-            max-width: 1000px;
-            margin: 3rem auto;
-            background: var(--white);
-            border-radius: 12px;
-            box-shadow: var(--shadow-lg);
-            overflow: hidden;
-        }
-
-        .pricing-header {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: var(--white);
-            padding: 2rem;
-            text-align: center;
-        }
-
-        .pricing-header h3 {
-            font-size: 1.8rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .pricing-body {
-            padding: 2rem;
-        }
-
-        .pricing-item {
-            display: grid;
-            grid-template-columns: 1fr 200px;
-            gap: 2rem;
-            padding: 1.5rem;
-            border-bottom: 1px solid #f3f4f6;
-            align-items: center;
-        }
-
-        .pricing-item:last-child {
-            border-bottom: none;
-        }
-
-        .pricing-item h4 {
-            font-size: 1.2rem;
-            color: var(--text-dark);
-            margin-bottom: 0.5rem;
-        }
-
-        .pricing-item p {
-            color: var(--text-light);
-            font-size: 0.95rem;
-        }
-
-        .pricing-item .price {
-            text-align: right;
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: var(--primary-color);
-        }
-
-        .pricing-item .price span {
-            font-size: 0.9rem;
-            color: var(--text-light);
-            font-weight: normal;
+            font-size: 1rem;
+            line-height: 1.7;
         }
 
         /* CTA Section */
         .cta-section {
-            padding: 5rem 2rem;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
             color: var(--white);
             text-align: center;
         }
 
         .cta-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
         }
 
         .cta-section p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
             opacity: 0.95;
         }
 
         .consultation-form {
-            max-width: 600px;
+            max-width: 700px;
             margin: 2rem auto;
             display: grid;
-            gap: 1rem;
+            gap: 1.5rem;
         }
 
         .form-group {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 1rem;
+            gap: 1.5rem;
         }
 
         .consultation-form input,
         .consultation-form select {
-            padding: 1rem;
+            padding: 1.2rem;
             border: none;
-            border-radius: 8px;
-            font-size: 1rem;
+            border-radius: 10px;
+            font-size: 1.1rem;
             width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            transition: var(--transition);
+        }
+
+        .consultation-form input:focus,
+        .consultation-form select:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(244, 162, 97, 0.3);
         }
 
         /* Footer */
         footer {
-            background: var(--text-dark);
+            background: var(--accent-color);
             color: var(--white);
-            padding: 3rem 2rem 1rem;
+            padding: 4rem 2rem 1rem;
         }
 
         .footer-content {
-            max-width: 1200px;
+            max-width: 1280px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
             margin-bottom: 2rem;
         }
 
         .footer-section h3 {
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
             color: var(--primary-color);
+            font-weight: 700;
         }
 
         .footer-section p,
         .footer-section ul {
-            color: #9ca3af;
+            color: #d1d5db;
             line-height: 1.8;
         }
 
@@ -713,13 +654,13 @@
         }
 
         .footer-section ul li {
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.75rem;
         }
 
         .footer-section a {
-            color: #9ca3af;
+            color: #d1d5db;
             text-decoration: none;
-            transition: color 0.3s ease;
+            transition: var(--transition);
         }
 
         .footer-section a:hover {
@@ -729,15 +670,88 @@
         .footer-bottom {
             text-align: center;
             padding-top: 2rem;
-            border-top: 1px solid #374151;
-            color: #9ca3af;
+            border-top: 1px solid #4b5563;
+            color: #d1d5db;
+        }
+
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.5);
+            z-index: 999;
+            transition: var(--transition);
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.7);
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+
+        /* Logo Showcase Section */
+        .logo-showcase {
+            padding: 6rem 2rem;
+            background: var(--off-white);
+        }
+
+        .logo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .logo-item {
+            background: var(--white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+            padding: 2.5rem;
+        }
+
+        .logo-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .logo-image {
+            height: 160px;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin-bottom: 1.5rem;
+            border: 2px solid var(--primary-color);
+            border-radius: 8px;
+        }
+
+        .logo-item h3 {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            font-weight: 700;
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
             .nav-links {
                 position: fixed;
-                top: 70px;
+                top: 80px;
                 left: -100%;
                 width: 100%;
                 background: var(--white);
@@ -761,7 +775,7 @@
             }
 
             .hero-text h1 {
-                font-size: 2.5rem;
+                font-size: 2.8rem;
             }
 
             .hero-stats {
@@ -776,28 +790,18 @@
                 grid-template-columns: 1fr;
             }
 
-            .pricing-item {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .pricing-item .price {
-                text-align: center;
-                margin-top: 1rem;
-            }
-
             .service-step {
-                grid-template-columns: 60px 1fr;
-                gap: 1rem;
+                grid-template-columns: 70px 1fr;
+                gap: 1.5rem;
             }
 
             .step-number {
-                width: 60px;
-                height: 60px;
+                width: 70px;
+                height: 70px;
             }
 
             .step-number .num {
-                font-size: 1.3rem;
+                font-size: 1.5rem;
             }
         }
     </style>
@@ -808,59 +812,19 @@
        target="_blank" 
        class="whatsapp-float"
        title="Chat with us on WhatsApp">
-        <svg viewBox="0 0 32 32" style="width: 28px; height: 28px; fill: white;">
-            <path d="M16.002 0h-.004C7.174 0 0 7.176 0 16c0 3.5 1.128 6.744 3.046 9.378l-1.994 5.944 6.15-1.966C9.732 30.95 12.75 32 16.002 32 24.826 32 32 24.824 32 16S24.826 0 16.002 0zm9.194 22.672c-.386 1.088-1.912 1.992-3.124 2.256-.832.176-1.916.316-5.57-1.2-4.68-1.936-7.696-6.696-7.928-7.004-.226-.308-1.87-2.486-1.87-4.744s1.184-3.368 1.602-3.828c.418-.46.912-.576 1.218-.576.306 0 .612.004.878.016.282.012.66-.106 1.032.788.386.926 1.31 3.198 1.426 3.428.118.23.198.498.042.806-.156.308-.234.5-.46.768-.226.268-.476.598-.68.802-.226.228-.46.476-.198.936.262.46 1.166 1.922 2.502 3.114 1.72 1.536 3.17 2.014 3.62 2.244.45.23.712.192.974-.116.262-.308 1.126-1.31 1.426-1.762.3-.452.6-.376 1.012-.228.412.156 2.608 1.23 3.058 1.454.45.23.75.346.866.53.112.19.112 1.088-.274 2.176z"/>
-        </svg>
+        <i class="fab fa-whatsapp" style="font-size: 28px; color: white;"></i>
     </a>
-    
-    <style>
-        .whatsapp-float {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: #25D366;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.5);
-            z-index: 999;
-            transition: all 0.3s ease;
-            animation: pulse 2s infinite;
-        }
-        
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.7);
-        }
-        
-        @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-            70% { box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
-        }
-        
-        @media (max-width: 768px) {
-            .whatsapp-float {
-                bottom: 20px;
-                right: 20px;
-                width: 50px;
-                height: 50px;
-            }
-        }
-    </style>
 
     <!-- Navigation -->
     <header>
         <nav>
-            <a href="#home" class="logo">Dalistan Group</a>
+            <a href="#home" class="logo">Dalistan<span>Group</span></a>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#businesses">Business Types</a></li>
                 <li><a href="#services">Our Process</a></li>
-                <li><a href="#success">Success Stories</a></li>
+                <li><a href="#portfolio">Our Portfolio</a></li>
+                <li><a href="#logos">Brands</a></li>
                 <li><a href="#contact">Start Now</a></li>
             </ul>
             <div class="mobile-menu" onclick="toggleMenu()">
@@ -878,12 +842,16 @@
                 <h1>Turn Your <span class="highlight">Business Dream</span> Into Reality</h1>
                 <p>Complete guidance and support to open your restaurant, bakery, gym, or any business venture from concept to grand opening</p>
                 <div class="cta-buttons">
-                    <a href="#contact" class="btn btn-primary">Start Your Journey</a>
-                    <a href="#businesses" class="btn btn-secondary">Explore Industries</a>
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i> Start Your Journey
+                    </a>
+                    <a href="#businesses" class="btn btn-secondary">
+                        <i class="fas fa-search"></i> Explore Industries
+                    </a>
                 </div>
                 <div class="hero-stats">
                     <div class="stat-box">
-                        <div class="number">50+</div>
+                        <div class="number">500+</div>
                         <div class="label">Businesses Launched</div>
                     </div>
                     <div class="stat-box">
@@ -898,19 +866,19 @@
             </div>
             <div class="hero-image">
                 <div class="business-icon">
-                    <div class="emoji">🍽️</div>
+                    <div class="icon"><i class="fas fa-utensils"></i></div>
                     <p>Restaurant</p>
                 </div>
                 <div class="business-icon">
-                    <div class="emoji">🥐</div>
+                    <div class="icon"><i class="fas fa-bread-slice"></i></div>
                     <p>Bakery</p>
                 </div>
                 <div class="business-icon">
-                    <div class="emoji">💪</div>
+                    <div class="icon"><i class="fas fa-dumbbell"></i></div>
                     <p>Gym & Fitness</p>
                 </div>
                 <div class="business-icon">
-                    <div class="emoji">☕</div>
+                    <div class="icon"><i class="fas fa-coffee"></i></div>
                     <p>Coffee Shop</p>
                 </div>
             </div>
@@ -925,34 +893,39 @@
             
             <div class="business-grid">
                 <div class="business-card">
-                    <div class="icon">🍽️</div>
+                    <div class="icon"><i class="fas fa-utensils"></i></div>
                     <h3>Restaurant</h3>
                     <p>Full-service dining establishment setup including kitchen design, menu development, and staff training</p>
                 </div>
                 
                 <div class="business-card">
-                    <div class="icon">🥐</div>
+                    <div class="icon"><i class="fas fa-bread-slice"></i></div>
                     <h3>Bakery & Cafe</h3>
                     <p>Artisan bakery setup with equipment sourcing, recipe development, and display design</p>
                 </div>
                 
                 <div class="business-card">
-                    <div class="icon">💪</div>
+                    <div class="icon"><i class="fas fa-dumbbell"></i></div>
                     <h3>Gym & Fitness Center</h3>
                     <p>Complete fitness facility planning including equipment selection and member management systems</p>
                 </div>
                 
                 <div class="business-card">
-                    <div class="icon">☕</div>
+                    <div class="icon"><i class="fas fa-coffee"></i></div>
                     <h3>Coffee Shop</h3>
                     <p>Specialty coffee business with barista training, supplier connections, and ambiance design</p>
                 </div>
                 
                 <div class="business-card">
-                    <div class="icon">🛒</div>
+                    <div class="icon"><i class="fas fa-store"></i></div>
                     <h3>Retail Store</h3>
                     <p>Retail business setup including inventory management, POS systems, and merchandising</p>
                 </div>
+                
+                <div class="business-card">
+                    <div class="icon"><i class="fas fa-spa"></i></div>
+                    <h3>Salon & Spa</h3>
+                    <p>Beauty and wellness business with equipment setup, staff training, and service menu development</p>
                 </div>
             </div>
         </div>
@@ -1056,42 +1029,42 @@
     <!-- Features Section -->
     <section class="features">
         <div class="container">
-            <h2 class="section-title">Why Choose Rhey Business Launch?</h2>
+            <h2 class="section-title">Why Choose Dalistan Group?</h2>
             <p class="section-subtitle">Complete support system for your entrepreneurial journey</p>
             
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="icon-wrapper">📋</div>
+                    <div class="icon-wrapper"><i class="fas fa-tasks"></i></div>
                     <h3>End-to-End Solutions</h3>
                     <p>From initial concept to grand opening, we handle every aspect of launching your business, ensuring nothing is overlooked</p>
                 </div>
                 
                 <div class="feature-card">
-                    <div class="icon-wrapper">👥</div>
+                    <div class="icon-wrapper"><i class="fas fa-users"></i></div>
                     <h3>Industry Experts</h3>
                     <p>Our team includes specialists in each industry with years of experience launching successful businesses</p>
                 </div>
                 
                 <div class="feature-card">
-                    <div class="icon-wrapper">💰</div>
+                    <div class="icon-wrapper"><i class="fas fa-hand-holding-usd"></i></div>
                     <h3>Financing Assistance</h3>
                     <p>We help secure funding through bank loans, investors, and grant programs tailored to your business type</p>
                 </div>
                 
                 <div class="feature-card">
-                    <div class="icon-wrapper">🏗️</div>
+                    <div class="icon-wrapper"><i class="fas fa-network-wired"></i></div>
                     <h3>Vendor Network</h3>
                     <p>Access our extensive network of trusted suppliers, contractors, and service providers for better pricing</p>
                 </div>
                 
                 <div class="feature-card">
-                    <div class="icon-wrapper">📈</div>
+                    <div class="icon-wrapper"><i class="fas fa-chart-line"></i></div>
                     <h3>Growth Strategy</h3>
                     <p>Beyond launch, we provide strategies for scaling, franchising, and expanding your business</p>
                 </div>
                 
                 <div class="feature-card">
-                    <div class="icon-wrapper">🤝</div>
+                    <div class="icon-wrapper"><i class="fas fa-headset"></i></div>
                     <h3>Ongoing Support</h3>
                     <p>90 days of post-launch support plus lifetime access to our business owner community and resources</p>
                 </div>
@@ -1099,64 +1072,122 @@
         </div>
     </section>
 
-    <!-- Success Stories Section -->
-    <section class="success-stories" id="success">
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
         <div class="container">
-            <h2 class="section-title">Success Stories</h2>
-            <p class="section-subtitle">Our Portfolio of Successful Business Launches</p>
+            <h2 class="section-title">Our Successful Launches</h2>
+            <p class="section-subtitle">A showcase of our most recent business launches</p>
             
-            <div style="text-align: center; margin: 3rem auto; max-width: 900px;">
-                <div style="background: var(--white); padding: 3rem; border-radius: 12px; box-shadow: var(--shadow-lg);">
-                    <!-- CHO LAB BAKERY Logo -->
-                    <div style="width: 200px; height: 200px; background: linear-gradient(135deg, #ffd700, #ffb300); border-radius: 50%; margin: 0 auto 2rem; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 8px 30px rgba(255, 193, 7, 0.3); position: relative;">
-                        <div style="position: absolute; top: 15%; font-size: 3rem; color: white;">👨‍🍳</div>
-                        <div style="position: absolute; bottom: 25%; color: white; font-weight: bold; font-size: 2rem; letter-spacing: 3px;">CHO</div>
-                        <div style="position: absolute; bottom: 10%; color: white; font-size: 0.8rem; letter-spacing: 2px;">LAB BAKERY</div>
+            <div class="portfolio-grid">
+                <!-- SHAWARMA XPRESS -->
+                <div class="portfolio-item">
+                    <div class="portfolio-image" style="background-image: url('images/shawarmaxpress.png');"></div>
+                    <div class="portfolio-content">
+                        <h3>SHAWARMA XPRESS</h3>
+                        <p>Fast-casual Middle Eastern restaurant specializing in authentic shawarma and mezze. Successfully launched in high-traffic shopping district.</p>
                     </div>
-                    
-                    <h3 style="font-size: 2rem; color: var(--text-dark); margin-bottom: 1rem;">CHO LAB BAKERY</h3>
-                    <p style="color: var(--text-light); font-size: 1.1rem; line-height: 1.8; margin-bottom: 3rem;">
-                        A premium artisan bakery concept that has successfully revolutionized the local bakery scene. 
-                        From concept to launch, we helped establish CHO LAB BAKERY as a leading name in artisanal baking, 
-                        combining traditional techniques with modern innovation.
-                    </p>
-                    
-                    <div style="border-top: 2px solid #f3f4f6; padding-top: 2rem; margin-top: 2rem;">
-                        <h4 style="color: var(--primary-color); font-size: 1.5rem; margin-bottom: 2rem;">Our Successful Launches</h4>
-                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; text-align: left; max-width: 700px; margin: 0 auto;">
-                            <div style="padding: 0.75rem; background: rgba(245, 158, 11, 0.1); border-left: 3px solid var(--primary-color); border-radius: 4px;">
-                                <span style="color: var(--primary-color); font-weight: bold; margin-right: 0.5rem;">1.</span>
-                                <span style="color: var(--text-dark); font-weight: 600;">SHAWARMA XPRESS</span>
-                            </div>
-                            <div style="padding: 0.75rem; background: rgba(245, 158, 11, 0.1); border-left: 3px solid var(--primary-color); border-radius: 4px;">
-                                <span style="color: var(--primary-color); font-weight: bold; margin-right: 0.5rem;">2.</span>
-                                <span style="color: var(--text-dark); font-weight: 600;">TAWOOK HEROES</span>
-                            </div>
-                            <div style="padding: 0.75rem; background: rgba(245, 158, 11, 0.1); border-left: 3px solid var(--primary-color); border-radius: 4px;">
-                                <span style="color: var(--primary-color); font-weight: bold; margin-right: 0.5rem;">3.</span>
-                                <span style="color: var(--text-dark); font-weight: 600;">DR. BURGER</span>
-                            </div>
-                            <div style="padding: 0.75rem; background: rgba(245, 158, 11, 0.1); border-left: 3px solid var(--primary-color); border-radius: 4px;">
-                                <span style="color: var(--primary-color); font-weight: bold; margin-right: 0.5rem;">4.</span>
-                                <span style="color: var(--text-dark); font-weight: 600;">WRAP ZONE</span>
-                            </div>
-                            <div style="padding: 0.75rem; background: rgba(245, 158, 11, 0.1); border-left: 3px solid var(--primary-color); border-radius: 4px;">
-                                <span style="color: var(--primary-color); font-weight: bold; margin-right: 0.5rem;">5.</span>
-                                <span style="color: var(--text-dark); font-weight: 600;">EMIRATI FISH AND CHIPS</span>
-                            </div>
-                            <div style="padding: 0.75rem; background: rgba(245, 158, 11, 0.1); border-left: 3px solid var(--primary-color); border-radius: 4px;">
-                                <span style="color: var(--primary-color); font-weight: bold; margin-right: 0.5rem;">6.</span>
-                                <span style="color: var(--text-dark); font-weight: 600;">THAI MOON</span>
-                            </div>
-                            <div style="padding: 0.75rem; background: rgba(245, 158, 11, 0.1); border-left: 3px solid var(--primary-color); border-radius: 4px;">
-                                <span style="color: var(--primary-color); font-weight: bold; margin-right: 0.5rem;">7.</span>
-                                <span style="color: var(--text-dark); font-weight: 600;">MR. KITCHENS</span>
-                            </div>
-                        </div>
-                        <p style="margin-top: 2rem; color: var(--text-light); font-style: italic;">
-                            And many more successful restaurant and food service businesses...
-                        </p>
+                </div>
+                <!-- CHO LAB BAKERY -->
+                <div class="portfolio-item">
+                    <div class="portfolio-image" style="background-image: url('images/cholab.png');"></div>
+                    <div class="portfolio-content">
+                        <h3>CHO LAB BAKERY</h3>
+                        <p>Artisan bakery offering a variety of sweet cakes and pastries.</p>
                     </div>
+                </div> 
+                <!-- TAWOOK HEROES -->
+                <div class="portfolio-item">
+                    <div class="portfolio-image" style="background-image: url('images/tawook.png');"></div>
+                    <div class="portfolio-content">
+                        <h3>TAWOOK HEROES</h3>
+                        <p>Specialty grilled chicken restaurant focusing on premium tawook dishes. Now operating three locations across the city.</p>
+                    </div>
+                </div>
+                <!-- DR. BURGER -->
+                <div class="portfolio-item">
+                    <div class="portfolio-image" style="background-image: url('images/drburger.png');"></div>
+                    <div class="portfolio-content">
+                        <h3>DR. BURGER</h3>
+                        <p>Gourmet burger joint with unique flavor combinations and premium ingredients. Quickly became a local favorite.</p>
+                    </div>
+                </div>
+                <!-- WRAP ZONE -->
+                <div class="portfolio-item">
+                    <div class="portfolio-image" style="background-image: url('images/wrapzone.png');"></div>
+                    <div class="portfolio-content">
+                        <h3>WRAP ZONE</h3>
+                        <p>Healthy fast-food concept offering customizable wraps and bowls. Popular lunch destination for office workers.</p>
+                    </div>
+                </div>
+                <!-- EMIRATI FISH AND CHIPS -->
+                <div class="portfolio-item">
+                    <div class="portfolio-image" style="background-image: url('images/emirati.png');"></div>
+                    <div class="portfolio-content">
+                        <h3>EMIRATI FISH AND CHIPS</h3>
+                        <p>Fusion concept combining traditional British fish and chips with Emirati flavors. Unique offering in the seafood market.</p>
+                    </div>
+                </div>
+                <!-- THAI MOON -->
+                <div class="portfolio-item">
+                    <div class="portfolio-image" style="background-image: url('images/thaimoon.png');"></div>
+                    <div class="portfolio-content">
+                        <h3>THAI MOON</h3>
+                        <p>Authentic Thai restaurant with elegant ambiance and traditional recipes. Received local food critic awards.</p>
+                    </div>
+                </div>
+                <!-- MR. KITCHENS -->
+                <div class="portfolio-item">
+                    <div class="portfolio-image" style="background-image: url('images/mrkitchen.png');"></div>
+                    <div class="portfolio-content">
+                        <h3>MR. KITCHENS</h3>
+                        <p>Multi-cuisine food hall concept with various kitchen stations. Popular venue for diverse dining preferences.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Logo Showcase Section -->
+    <section class="logo-showcase" id="logos">
+        <div class="container">
+            <h2 class="section-title">Our Brand Portfolio</h2>
+            <p class="section-subtitle">Discover the successful brands we've helped launch and grow</p>
+            
+            <div class="logo-grid">
+                <!-- SHAWARMA XPRESS -->
+                <div class="logo-item">
+                    <div class="logo-image" style="background-image: url('images/shawarmaxpress.png');"></div>
+                    <h3>SHAWARMA XPRESS</h3>
+                </div>
+                <!-- TAWOOK HEROES -->
+                <div class="logo-item">
+                    <div class="logo-image" style="background-image: url('images/tawook.png');"></div>
+                    <h3>TAWOOK HEROES</h3>
+                </div>
+                <!-- DR. BURGER -->
+                <div class="logo-item">
+                    <div class="logo-image" style="background-image: url('images/drburger.png');"></div>
+                    <h3>DR. BURGER</h3>
+                </div>
+                <!-- WRAP ZONE -->
+                <div class="logo-item">
+                    <div class="logo-image" style="background-image: url('images/wrapzone.png');"></div>
+                    <h3>WRAP ZONE</h3>
+                </div>
+                <!-- EMIRATI FISH AND CHIPS -->
+                <div class="logo-item">
+                    <div class="logo-image" style="background-image: url('images/emirati.png');"></div>
+                    <h3>EMIRATI FISH AND CHIPS</h3>
+                </div>
+                <!-- THAI MOON -->
+                <div class="logo-item">
+                    <div class="logo-image" style="background-image: url('images/thaimoon.png');"></div>
+                    <h3>THAI MOON</h3>
+                </div>
+                <!-- MR. KITCHENS -->
+                <div class="logo-item">
+                    <div class="logo-image" style="background-image: url('images/mrkitchen.png');"></div>
+                    <h3>MR. KITCHENS</h3>
                 </div>
             </div>
         </div>
@@ -1169,10 +1200,10 @@
             <p>Schedule your free consultation and take the first step today</p>
             <div class="cta-buttons" style="margin-bottom: 2rem;">
                 <a href="https://wa.me/971507276507?text=Hi%20Dalistan%20Group,%20I%20need%20help%20opening%20a%20business" target="_blank" class="btn btn-primary" style="background: #25D366; border: none;">
-                    💬 WhatsApp Us Now
+                    <i class="fab fa-whatsapp"></i> WhatsApp Us Now
                 </a>
                 <a href="tel:+971507276507" class="btn btn-secondary" style="border-color: white; color: white;">
-                    📞 Call +971 50 727 6507
+                    <i class="fas fa-phone"></i> Call +971 50 727 6507
                 </a>
             </div>
             
@@ -1212,8 +1243,8 @@
                         <option>Just exploring</option>
                     </select>
                 </div>
-                <button type="submit" class="btn btn-primary" style="background: white; color: var(--primary-color);">
-                    Get Free Consultation
+                <button type="submit" class="btn btn-primary" style="background: var(--primary-color); color: var(--accent-color);">
+                    <i class="fas fa-calendar-check"></i> Get Free Consultation
                 </button>
             </form>
         </div>
@@ -1226,8 +1257,8 @@
                 <h3>About Dalistan Group</h3>
                 <p>Your trusted partner in business creation. We've helped launch over 500 successful businesses across 30+ industries.</p>
                 <div style="margin-top: 1rem;">
-                    <a href="https://www.linkedin.com/in/reynaldo-dalistan-96109174/" target="_blank" style="color: #0077B5; text-decoration: none;">
-                        <strong>LinkedIn Profile</strong>
+                    <a href="https://www.linkedin.com/in/reynaldo-dalistan-96109174/" target="_blank" style="color: var(--primary-color); text-decoration: none;">
+                        <i class="fab fa-linkedin"></i> <strong>LinkedIn Profile</strong>
                     </a>
                 </div>
             </div>
@@ -1256,17 +1287,17 @@
             <div class="footer-section">
                 <h3>Contact Us</h3>
                 <ul>
-                    <li>📧 info@dalistangroup.com</li>
-                    <li>📱 +971 50 727 6507</li>
-                    <li>💬 <a href="https://wa.me/971507276507" target="_blank" style="color: #25D366;">WhatsApp Us</a></li>
-                    <li>📍 Business Bay, Dubai</li>
-                    <li>🕒 Sun-Thu: 9AM-6PM</li>
+                    <li><i class="fas fa-envelope"></i> info@dalistangroup.com</li>
+                    <li><i class="fas fa-phone"></i> +971 50 727 6507</li>
+                    <li><i class="fab fa-whatsapp" style="color: #25D366;"></i> <a href="https://wa.me/971507276507" target="_blank" style="color: #25D366;">WhatsApp Us</a></li>
+                    <li><i class="fas fa-map-marker-alt"></i> Business Bay, Dubai</li>
+                    <li><i class="fas fa-clock"></i> Sun-Thu: 9AM-6PM</li>
                 </ul>
             </div>
         </div>
         
         <div class="footer-bottom">
-            <p>&copy; 2025 Dalistan Group. All rights reserved. | Privacy Policy | Terms of Service</p>
+            <p>&copy; 2025 Dalistan Group. All rights reserved. | <a href="#" style="color: var(--primary-color);">Privacy Policy</a> | <a href="#" style="color: var(--primary-color);">Terms of Service</a></p>
         </div>
     </footer>
 
@@ -1302,7 +1333,7 @@
 
         // Scroll animations
         function handleScroll() {
-            const elements = document.querySelectorAll('.business-card, .feature-card, .story-card, .service-step');
+            const elements = document.querySelectorAll('.business-card, .feature-card, .portfolio-item, .service-step, .logo-item');
             
             elements.forEach(element => {
                 const rect = element.getBoundingClientRect();
@@ -1326,7 +1357,7 @@
             if (currentScroll > 100) {
                 header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.15)';
             } else {
-                header.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+                header.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)';
             }
         });
 
