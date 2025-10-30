@@ -528,7 +528,7 @@
         .portfolio-grid-lux {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
+            gap: 1.5rem;
             max-width: 1600px;
             margin: 4rem auto 0;
         }
@@ -546,18 +546,19 @@
         }
 
         .portfolio-image-lux {
-            height: 300px;
+            height: 200px;
             background: linear-gradient(135deg, #4a4a4a, #2d2d2d);
             display: flex;
             align-items: center;
             justify-content: center;
             overflow: hidden;
             position: relative;
+            padding: 1.5rem;
         }
 
         .portfolio-image-lux img {
-            width: 70%;
-            height: 70%;
+            max-width: 70%;
+            max-height: 70%;
             object-fit: contain;
             transition: transform 0.5s ease;
         }
@@ -567,13 +568,13 @@
         }
 
         .portfolio-name-lux {
-            padding: 2rem;
+            padding: 1.5rem;
             text-align: center;
         }
 
         .portfolio-name-lux h3 {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             color: var(--black);
             font-weight: 400;
             letter-spacing: 2px;
@@ -766,7 +767,7 @@
             }
 
             .stats-container {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(3, 1fr);
                 gap: 2rem;
             }
 
@@ -776,6 +777,20 @@
 
             .portfolio-grid-lux {
                 grid-template-columns: repeat(2, 1fr);
+                gap: 1.25rem;
+            }
+
+            .portfolio-image-lux {
+                height: 180px;
+                padding: 1.25rem;
+            }
+
+            .portfolio-name-lux {
+                padding: 1.25rem;
+            }
+
+            .portfolio-name-lux h3 {
+                font-size: 1.1rem;
             }
 
             .footer-content-lux {
@@ -818,9 +833,37 @@
                 font-size: 2.5rem;
             }
 
+            .hero-subtitle {
+                font-size: 1rem;
+                letter-spacing: 3px;
+            }
+
+            .hero-description {
+                font-size: 1rem;
+            }
+
             .hero-buttons {
                 flex-direction: column;
                 gap: 1rem;
+            }
+
+            .btn-luxury {
+                padding: 1rem 2rem;
+                font-size: 0.85rem;
+            }
+
+            .stats-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                padding: 0 1rem;
+            }
+
+            .stat-item {
+                padding: 2rem 1.5rem;
+            }
+
+            .stat-number {
+                font-size: 3.5rem;
             }
 
             .content-section,
@@ -833,12 +876,48 @@
                 font-size: 2.5rem;
             }
 
+            .section-description-lux {
+                font-size: 1rem;
+            }
+
+            .service-card-lux {
+                padding: 3rem 2rem;
+            }
+
+            .service-icon-lux {
+                font-size: 2.5rem;
+            }
+
+            .service-title-lux {
+                font-size: 1.75rem;
+            }
+
             .portfolio-grid-lux {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+
+            .portfolio-image-lux {
+                height: 150px;
+                padding: 1rem;
+            }
+
+            .portfolio-name-lux {
+                padding: 1rem;
+            }
+
+            .portfolio-name-lux h3 {
+                font-size: 0.9rem;
+                letter-spacing: 1px;
             }
 
             .form-row {
                 grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .form-luxury {
+                padding: 2rem 1.5rem;
             }
 
             .footer-content-lux {
@@ -848,6 +927,61 @@
 
             .cta-content-lux h2 {
                 font-size: 2.5rem;
+            }
+
+            .cta-content-lux p {
+                font-size: 1rem;
+            }
+
+            .cta-buttons-lux {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            footer {
+                padding: 4rem 2rem 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .section-title-lux {
+                font-size: 2rem;
+            }
+
+            .stat-number {
+                font-size: 3rem;
+            }
+
+            .portfolio-grid-lux {
+                gap: 0.75rem;
+            }
+
+            .portfolio-image-lux {
+                height: 130px;
+                padding: 0.75rem;
+            }
+
+            .portfolio-name-lux {
+                padding: 0.75rem;
+            }
+
+            .portfolio-name-lux h3 {
+                font-size: 0.8rem;
+            }
+
+            .cta-content-lux h2 {
+                font-size: 2rem;
+            }
+
+            .scroll-top-lux {
+                width: 45px;
+                height: 45px;
+                bottom: 2rem;
+                right: 2rem;
             }
         }
     </style>
@@ -1013,7 +1147,7 @@
         <div class="portfolio-grid-lux">
             <div class="portfolio-card-lux">
                 <div class="portfolio-image-lux">
-                    <div style="width: 150px; height: 150px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 3rem;">🍗</div>
+                    <img src="images/tawook.png" alt="Tawook Heroes Logo">
                 </div>
                 <div class="portfolio-name-lux">
                     <h3>TAWOOK HEROES</h3>
@@ -1022,7 +1156,7 @@
 
             <div class="portfolio-card-lux">
                 <div class="portfolio-image-lux">
-                    <div style="width: 150px; height: 150px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 3rem;">🍔</div>
+                    <img src="images/drburger.png" alt="Dr. Burger Logo">
                 </div>
                 <div class="portfolio-name-lux">
                     <h3>DR. BURGER</h3>
@@ -1031,7 +1165,7 @@
 
             <div class="portfolio-card-lux">
                 <div class="portfolio-image-lux">
-                    <div style="width: 150px; height: 150px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 3rem;">🌯</div>
+                    <img src="images/wrapzone.png" alt="Wrap Zone Logo">
                 </div>
                 <div class="portfolio-name-lux">
                     <h3>WRAP ZONE</h3>
@@ -1040,7 +1174,7 @@
 
             <div class="portfolio-card-lux">
                 <div class="portfolio-image-lux">
-                    <div style="width: 150px; height: 150px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 3rem;">🐟</div>
+                    <img src="images/emirati.png" alt="Emirati Fish and Chips Logo">
                 </div>
                 <div class="portfolio-name-lux">
                     <h3>EMIRATI FISH AND CHIPS</h3>
@@ -1049,7 +1183,7 @@
 
             <div class="portfolio-card-lux">
                 <div class="portfolio-image-lux">
-                    <div style="width: 150px; height: 150px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 3rem;">🍜</div>
+                    <img src="images/thaimoon.png" alt="Thai Moon Logo">
                 </div>
                 <div class="portfolio-name-lux">
                     <h3>THAI MOON</h3>
@@ -1058,7 +1192,7 @@
 
             <div class="portfolio-card-lux">
                 <div class="portfolio-image-lux">
-                    <div style="width: 150px; height: 150px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 3rem;">👨‍🍳</div>
+                    <img src="images/mrkitchen.png" alt="Mr. Kitchens Logo">
                 </div>
                 <div class="portfolio-name-lux">
                     <h3>MR. KITCHENS</h3>
